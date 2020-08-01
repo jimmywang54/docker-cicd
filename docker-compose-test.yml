@@ -1,0 +1,10 @@
+
+version: '3.3'
+
+services: 
+    docker-cicd:
+        image: docker-cicd
+        build: .
+        command: npm test
+        volumes: 
+            - .:/app

@@ -1,0 +1,9 @@
+
+version: '3.3'
+
+services: 
+    docker-cicd:
+        image: docker-cicd
+        build: .
+        volumes: 
+            - .:/app
