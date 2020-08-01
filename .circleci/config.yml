@@ -22,6 +22,7 @@ jobs:
                 command: >
                     sudo apt-get update &&
                     sudo apt-get install python python-pip python-dev &&
+                    sudo pip install --upgrade setuptools &&
                     sudo pip install awsebcli &&
                     sudo pip install --upgrade --user awsebcli
             - deploy:
