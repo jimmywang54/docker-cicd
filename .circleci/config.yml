@@ -22,7 +22,7 @@ jobs:
                 command: >
                     sudo apt-get update &&
                     sudo apt-get upgrade &&
-                    sudo apt-get install python3.7 python3-pip -y &&
+                    sudo apt-get install python3.6 python3-pip -y &&
                     sudo pip3 install awsebcli &&
                     sudo pip3 install --upgrade --user awsebcli
             - deploy:
