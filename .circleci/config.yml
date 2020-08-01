@@ -22,9 +22,7 @@ jobs:
                 command: >
                     sudo apt-get update &&
                     sudo apt-get upgrade &&
-                    sudo apt-get install python3.6 python3-pip -y &&
-                    sudo pip3 install awsebcli &&
-                    sudo pip3 install --upgrade --user awsebcli
+                    sudo apt-get install python3.6
             - deploy:
                 name: Deploy to AWS EB
                 command: sudo eb deploy docker-cicd-dev
