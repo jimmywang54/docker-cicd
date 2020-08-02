@@ -13,17 +13,14 @@ jobs:
     deploy:
         docker:
             - image: circleci/node:9.2.0
+            - image: circleci/python:latest
             - image: docker:17.05.0-ce-git
         steps:
             - checkout
             - setup_remote_docker
             - run:
                 name: Install EB Command Line
-                command: |
-                    sudo apt-get -y -qq update &&
-                    sudo apt-get install python-pip python-dev build-essential &&
-                    sudo pip install --upgrade setuptools &&
-                    sudo pip install awsebcli --upgrade
+                command: sudo pip install awsebcli --upgrade
             - deploy:
                 name: Deploy to AWS EB
                 command: sudo eb deploy docker-cicd-dev
