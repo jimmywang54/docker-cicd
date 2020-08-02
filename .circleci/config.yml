@@ -20,7 +20,7 @@ jobs:
                 name: Install EB Command Line
                 command: sudo pip install awsebcli --upgrade
             - run: eb --version
-            - run: eb init --interactive
+            - run: eb init
             - deploy:
                 name: Deploy to AWS EB
                 command: sudo eb deploy docker-cicd-dev
