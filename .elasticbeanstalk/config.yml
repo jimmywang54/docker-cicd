@@ -1,13 +1,16 @@
 branch-defaults:
   master:
-    environment: env-dev1
+    environment: env-dev
 environment-defaults:
+  env-dev:
+    branch: null
+    repository: null
   env-dev1:
     branch: null
     repository: null
 global:
   application_name: docker-cicd
-  default_ec2_keyname: null
+  default_ec2_keyname: aws-eb
   default_platform: Docker running on 64bit Amazon Linux 2
   default_region: us-west-2
   include_git_submodules: true
