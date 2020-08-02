@@ -12,9 +12,7 @@ jobs:
                 command: docker-compose -f docker-compose-test.yml run docker-cicd
     deploy:
         docker:
-            - image: circleci/node:9.2.0
             - image: circleci/python:latest
-            - image: docker:17.05.0-ce-git
         steps:
             - checkout
             - setup_remote_docker
